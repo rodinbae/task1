@@ -1,0 +1,14 @@
+.bi-patch-minus{
+    font-size: 25px;
+}
+
+.bi-patch-plus{
+    font-size: 25px;
+    
+}
+
+
+/* KART GIZLEMEK ICIN */
+
+.card { margin-bottom: 20px; }
+.d-none { display: none; }
