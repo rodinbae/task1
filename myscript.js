@@ -29,7 +29,6 @@ let toplamAdet = 0;
 let toplamTutar = 0;
 
 
-
 function Kontrol(){
 
     alert("Sepete urun eklenmistir");
@@ -207,7 +206,7 @@ function Kontrol3(){
                             document.getElementById("sepetMiktar").innerText = sepetMiktar;
                             document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
-                             if(toplamAdet<0){
+                             if(toplamAdet<1){
                                 sepetMiktar=0;
                                 toplamAdet=0;
                                 toplamTutar=0;
@@ -220,9 +219,11 @@ function Kontrol3(){
 
                             toplamTutar-=kitap1.fiyat;
 
-                            if(toplamTutar<0){
+                            if(toplamTutar<1){
                                 toplamTutar = 0;
                                 document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
+                                document.getElementById("sepetMiktar").innerHTML = " ";
+
 
                             }
                             document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
@@ -239,8 +240,8 @@ function Kontrol3(){
                             document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
                             toplamTutar+=kitap1.fiyat;
-
                             document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
-
+                            
 
                         }
+                        
