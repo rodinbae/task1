@@ -41,7 +41,7 @@ function Kontrol(){
 
     document.getElementById("sepetMiktar").innerText = sepetMiktar;
 
-    document.getElementById("kitapIcerik").innerHTML = kitap1.resim + "<br>" + "Kitap Adi: " + kitap1.isim + "<br>" + "Yazar: " + kitap1.yazar + "<br>" + "Fiyat: " + kitap1.fiyat + " USD";
+    document.getElementById("kitapIcerik").innerHTML = kitap1.resim + "<br>" + "Kitap Adi: " + kitap1.isim + "<br>" + "Yazar: " + kitap1.yazar + "<br>" + "Fiyat: " + kitap1.fiyat + " USD" + "<br>" + "ID: " + kitap1.id;
 
     document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
@@ -57,7 +57,7 @@ function Kontrol2(){
 
     document.getElementById("sepetMiktar").innerText = sepetMiktar;
 
-    document.getElementById("kitapIcerik").innerHTML = kitap2.resim + "<br>" + "Kitap Adi: " + kitap2.isim + "<br>" + "Yazar: " + kitap2.yazar + "<br>" + "Fiyat: " + kitap2.fiyat + " USD";
+    document.getElementById("kitapIcerik").innerHTML = kitap2.resim + "<br>" + "Kitap Adi: " + kitap2.isim + "<br>" + "Yazar: " + kitap2.yazar + "<br>" + "Fiyat: " + kitap2.fiyat + " USD" + "<br>" + "ID: " + kitap2.id;
 
     document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
@@ -74,7 +74,7 @@ function Kontrol3(){
 
     document.getElementById("sepetMiktar").innerText = sepetMiktar;
 
-     document.getElementById("kitapIcerik").innerHTML = kitap3.resim + "<br>" + "Kitap Adi: " + kitap3.isim + "<br>" + "Yazar: " + kitap3.yazar + "<br>" + "Fiyat: " + kitap3.fiyat + " USD";
+     document.getElementById("kitapIcerik").innerHTML = kitap3.resim + "<br>" + "Kitap Adi: " + kitap3.isim + "<br>" + "Yazar: " + kitap3.yazar + "<br>" + "Fiyat: " + kitap3.fiyat + " USD" + "<br>" + "ID: " + kitap3.id;
     
      document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
@@ -92,7 +92,7 @@ function Kontrol3(){
 
         document.getElementById("sepetMiktar").innerText = sepetMiktar;
 
-        document.getElementById("kitapIcerik").innerHTML = kitap4.resim + "<br>" + "Kitap Adi: " + kitap4.isim + "<br>" + "Yazar: " + kitap4.yazar + "<br>" + "Fiyat: " + kitap4.fiyat + " USD";
+        document.getElementById("kitapIcerik").innerHTML = kitap4.resim + "<br>" + "Kitap Adi: " + kitap4.isim + "<br>" + "Yazar: " + kitap4.yazar + "<br>" + "Fiyat: " + kitap4.fiyat + " USD" + "<br>" + "ID: " + kitap4.id;
         
         document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
@@ -110,7 +110,7 @@ function Kontrol3(){
 
             document.getElementById("sepetMiktar").innerText = sepetMiktar;
             
-            document.getElementById("kitapIcerik").innerHTML = kitap5.resim + "<br>" + "Kitap Adi: " + kitap5.isim + "<br>" + "Yazar: " + kitap5.yazar + "<br>" + "Fiyat: " + kitap5.fiyat + " USD";
+            document.getElementById("kitapIcerik").innerHTML = kitap5.resim + "<br>" + "Kitap Adi: " + kitap5.isim + "<br>" + "Yazar: " + kitap5.yazar + "<br>" + "Fiyat: " + kitap5.fiyat + " USD" + "<br>" + "ID: " + kitap5.id;
             
             document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
@@ -127,7 +127,7 @@ function Kontrol3(){
 
                 document.getElementById("sepetMiktar").innerText = sepetMiktar;
 
-                document.getElementById("kitapIcerik").innerHTML = kitap6.resim + "<br>" + "Kitap Adi: " + kitap6.isim + "<br>" + "Yazar: " + kitap6.yazar + "<br>" + "Fiyat: " + kitap6.fiyat + " USD";
+                document.getElementById("kitapIcerik").innerHTML = kitap6.resim + "<br>" + "Kitap Adi: " + kitap6.isim + "<br>" + "Yazar: " + kitap6.yazar + "<br>" + "Fiyat: " + kitap6.fiyat + " USD" + "<br>" + "ID: " + kitap6.id;
                 
                 document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
@@ -144,7 +144,7 @@ function Kontrol3(){
 
                     document.getElementById("sepetMiktar").innerText = sepetMiktar;
 
-                    document.getElementById("kitapIcerik").innerHTML = kitap7.resim + "<br>" + "Kitap Adi: " + kitap7.isim + "<br>" + "Yazar: " + kitap7.yazar + "<br>" + "Fiyat: " + kitap7.fiyat + " USD";
+                    document.getElementById("kitapIcerik").innerHTML = kitap7.resim + "<br>" + "Kitap Adi: " + kitap7.isim + "<br>" + "Yazar: " + kitap7.yazar + "<br>" + "Fiyat: " + kitap7.fiyat + " USD" + "<br>" + "ID: " + kitap7.id;
                     
                     document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
@@ -161,7 +161,7 @@ function Kontrol3(){
 
                         document.getElementById("sepetMiktar").innerText = sepetMiktar;
                             
-                        document.getElementById("kitapIcerik").innerHTML = kitap8.resim + "<br>" + "Kitap Adi: " + kitap8.isim + "<br>" + "Yazar: " + kitap8.yazar + "<br>" + "Fiyat: " + kitap8.fiyat + " USD";;
+                        document.getElementById("kitapIcerik").innerHTML = kitap8.resim + "<br>" + "Kitap Adi: " + kitap8.isim + "<br>" + "Yazar: " + kitap8.yazar + "<br>" + "Fiyat: " + kitap8.fiyat + " USD" + "<br>" + "ID: " + kitap8.id;
                         
                         document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
@@ -178,7 +178,7 @@ function Kontrol3(){
 
                             document.getElementById("sepetMiktar").innerText = sepetMiktar;
                                 
-                            document.getElementById("kitapIcerik").innerHTML = kitap9.resim + "<br>" + "Kitap Adi: " + kitap9.isim + "<br>" + "Yazar: " + kitap9.yazar + "<br>" + "Fiyat: " + kitap9.fiyat + " USD";
+                            document.getElementById("kitapIcerik").innerHTML = kitap9.resim + "<br>" + "Kitap Adi: " + kitap9.isim + "<br>" + "Yazar: " + kitap9.yazar + "<br>" + "Fiyat: " + kitap9.fiyat + " USD" + "<br>" + "ID: " + kitap9.id;
                             
                             document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
@@ -207,17 +207,6 @@ function Kontrol3(){
 
                             document.getElementById("sepetMiktar").innerText = sepetMiktar;
                             document.getElementById("toplamAdet").innerHTML = toplamAdet;
-
-                             if(toplamAdet<1){
-                                sepetMiktar=0;
-                                toplamAdet=0;
-                                toplamTutar=0;
-                                document.getElementById("toplamAdet").innerHTML = 0;
-                                document.getElementById("sepetMiktar").innerHTML = 0;
-                                document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
-
-                            }
-
 
                             /* toplamTutar-=kitap1.fiyat; */
 
@@ -261,11 +250,17 @@ function Kontrol3(){
                                 toplamTutar-= kitap9.fiyat;
                             }
 
-                            if(toplamTutar<0){
-                                toplamTutar = 0;
+
+                            if(toplamAdet<1){
+                                sepetMiktar=0;
+                                toplamAdet=0;
+                                toplamTutar=0;
+                                document.getElementById("toplamAdet").innerHTML = 0;
+                                document.getElementById("sepetMiktar").innerHTML = "";
                                 document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
 
                             }
+
                             document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
 
 
@@ -279,8 +274,10 @@ function Kontrol3(){
                             document.getElementById("sepetMiktar").innerText = sepetMiktar;
                             document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
-                            let kitapID=0;
+                            /* toplamTutar+=kitap1.fiyat; */
 
+                            let kitapID=0;
+                            
                             kitapID = Number(prompt("Kitap ID giriniz"));
 
                             if(kitapID == 1){
