@@ -208,7 +208,7 @@ function Kontrol3(){
                             document.getElementById("sepetMiktar").innerText = sepetMiktar;
                             document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
-                             if(toplamAdet<0){
+                             if(toplamAdet<1){
                                 sepetMiktar=0;
                                 toplamAdet=0;
                                 toplamTutar=0;
