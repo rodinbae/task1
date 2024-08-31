@@ -44,7 +44,7 @@ function Kontrol(){
 
     document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
-    document.getElementById("toplamTutar").innerHTML = toplamTutar;
+    document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
 }
 
 function Kontrol2(){
@@ -60,7 +60,7 @@ function Kontrol2(){
 
     document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
-    document.getElementById("toplamTutar").innerHTML = toplamTutar;
+    document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
 
 }
 
@@ -77,7 +77,7 @@ function Kontrol3(){
     
      document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
-     document.getElementById("toplamTutar").innerHTML = toplamTutar;
+     document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
     
     }
 
@@ -95,7 +95,7 @@ function Kontrol3(){
         
         document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
-        document.getElementById("toplamTutar").innerHTML = toplamTutar;
+        document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
         
         }
 
@@ -113,7 +113,7 @@ function Kontrol3(){
             
             document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
-            document.getElementById("toplamTutar").innerHTML = toplamTutar;
+            document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
             
             }
 
@@ -130,7 +130,7 @@ function Kontrol3(){
                 
                 document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
-                document.getElementById("toplamTutar").innerHTML = toplamTutar;
+                document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
                 
                 }
 
@@ -147,7 +147,7 @@ function Kontrol3(){
                     
                     document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
-                    document.getElementById("toplamTutar").innerHTML = toplamTutar;
+                    document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
                     
                     }
 
@@ -164,7 +164,7 @@ function Kontrol3(){
                         
                         document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
-                        document.getElementById("toplamTutar").innerHTML = toplamTutar;
+                        document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
                         
                         }
 
@@ -181,7 +181,7 @@ function Kontrol3(){
                             
                             document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
-                            document.getElementById("toplamTutar").innerHTML = toplamTutar;
+                            document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
                             
                             }
 
@@ -189,8 +189,8 @@ function Kontrol3(){
                         function sepetiTemizle(){
                             document.getElementById("kitapIcerik").innerHTML = "";
                             document.getElementById("sepetMiktar").innerHTML = "";
-                            document.getElementById("toplamTutar").innerHTML = "";
-                            document.getElementById("toplamAdet").innerHTML = "";
+                            document.getElementById("toplamTutar").innerHTML = "0 USD";
+                            document.getElementById("toplamAdet").innerHTML = "0 Adet";
 
                             toplamTutar = 0; //toplam tutar yazan sayi
                             toplamAdet = 0; //toplam adet yazan sayi
@@ -207,18 +207,26 @@ function Kontrol3(){
                             document.getElementById("sepetMiktar").innerText = sepetMiktar;
                             document.getElementById("toplamAdet").innerHTML = toplamAdet;
 
-                             if(toplamAdet = 0){
+                             if(toplamAdet<0){
                                 sepetMiktar=0;
                                 toplamAdet=0;
                                 toplamTutar=0;
-                                document.getElementById("toplamAdet").innerHTML = toplamAdet;
-                                document.getElementById("sepetMiktar").innerHTML = sepetMiktar;
+                                document.getElementById("toplamAdet").innerHTML = 0;
+                                document.getElementById("sepetMiktar").innerHTML = 0;
                                 document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
 
                             }
 
+
                             toplamTutar-=kitap1.fiyat;
+
+                            if(toplamTutar<0){
+                                toplamTutar = 0;
+                                document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
+
+                            }
                             document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
+
 
                         }
 
