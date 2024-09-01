@@ -9,7 +9,7 @@ constructor(resim,isim,yazar,fiyat,id,tur){
 }
 }
 
-var kitap1 = new Kitap("<img src='images/kitap.jpg' style='width:250px'>","The Witcher: Kirlangic Yolu", "Andrzej Sapkowski" , 20 , 1,"fantastik");
+var kitap1 = new Kitap("<img src='images/kitap.jpg' style='width:250px'>","The Witcher: Kirlangic Kulesi", "Andrzej Sapkowski" , 20 , 1,"fantastik");
 var kitap2 = new Kitap("<img src='images/kitap2.jpg' style='width:250px'>","1984","George Orwell",15,2,"roman");
 var kitap3 = new Kitap("<img src='images/kitap3.jpg' style='width:250px'>","Hayat Icin 12 Kural","Jordan Peterson",30,3,"gelisim");
 var kitap4 = new Kitap("<img src='images/kitap4.jpg' style='width:250px'>","Atomik Aliskanliklar","James Clear",10,4,"gelisim");
@@ -28,16 +28,16 @@ let toplamAdet = 0;
 // offcanvas'ta bulunan toplam tutari arttiracak kod.
 let toplamTutar = 0;
 
-// let kitapBir = 1, kitapIki = 2, kitapUc = 3, kitapDort = 4, kitapBes = 5, kitapAlti = 6, kitapYedi = 7, kitapSekiz = 8, kitapDokuz = 9;
-
+// kitapArttir fonksiyonunda kullanilan kod.
+let carpan = 1;
 
 function Kontrol(){
 
     alert("Sepete urun eklenmistir");
     sepetMiktar++; //yukarida bahsettigim gibi navbardaki sepet ikonunun yanina gelen sayiyi arttiriyor.
     toplamAdet++; //offcanvas'ta bulunan toplam adet sayisini arttiriyor
-
-    toplamTutar = toplamTutar + kitap1.fiyat;
+    
+    toplamTutar += 20;
 
     document.getElementById("sepetMiktar").innerText = sepetMiktar;
 
@@ -53,7 +53,9 @@ function Kontrol2(){
     sepetMiktar++;
     toplamAdet++;
 
-    toplamTutar+=kitap2.fiyat;
+
+
+    toplamTutar+=15;
 
     document.getElementById("sepetMiktar").innerText = sepetMiktar;
 
@@ -70,7 +72,7 @@ function Kontrol3(){
     sepetMiktar++;
     toplamAdet++;
 
-    toplamTutar+=kitap3.fiyat;
+    toplamTutar+=30;
 
     document.getElementById("sepetMiktar").innerText = sepetMiktar;
 
@@ -88,7 +90,7 @@ function Kontrol3(){
         sepetMiktar++;
         toplamAdet++;
 
-        toplamTutar+=kitap4.fiyat;
+        toplamTutar+=10;
 
         document.getElementById("sepetMiktar").innerText = sepetMiktar;
 
@@ -106,7 +108,7 @@ function Kontrol3(){
             sepetMiktar++;
             toplamAdet++;
 
-            toplamTutar+=kitap5.fiyat;
+            toplamTutar+=15;
 
             document.getElementById("sepetMiktar").innerText = sepetMiktar;
             
@@ -123,7 +125,8 @@ function Kontrol3(){
                 sepetMiktar++;
 
                 toplamAdet++;
-                toplamTutar+=kitap6.fiyat;
+
+                toplamTutar+=15;
 
                 document.getElementById("sepetMiktar").innerText = sepetMiktar;
 
@@ -138,9 +141,8 @@ function Kontrol3(){
                 function Kontrol7(){
                     alert("Sepete urun eklenmistir");
                     sepetMiktar++;
-
                     toplamAdet++;
-                    toplamTutar+=kitap7.fiyat;
+                    toplamTutar+=30;
 
                     document.getElementById("sepetMiktar").innerText = sepetMiktar;
 
@@ -155,9 +157,8 @@ function Kontrol3(){
                     function Kontrol8(){
                         alert("Sepete urun eklenmistir");
                         sepetMiktar++;
-
                         toplamAdet++;
-                        toplamTutar+=kitap8.fiyat;
+                        toplamTutar+=12;
 
                         document.getElementById("sepetMiktar").innerText = sepetMiktar;
                             
@@ -172,9 +173,8 @@ function Kontrol3(){
                         function Kontrol9(){
                             alert("Sepete urun eklenmistir");
                             sepetMiktar++;
-
                             toplamAdet++;
-                            toplamTutar+=kitap9.fiyat;
+                            toplamTutar+=30;
 
                             document.getElementById("sepetMiktar").innerText = sepetMiktar;
                                 
@@ -200,126 +200,38 @@ function Kontrol3(){
                             alert("Sepetiniz temizlenmistir");
                         }
 
+                        function kitapArttir() {
+                            
+                            toplamAdet++;
+                            sepetMiktar++;
+
+                            carpan++;
+
+                             document.getElementById("sepetMiktar").innerText = sepetMiktar;
+                             document.getElementById("toplamAdet").innerHTML = toplamAdet; 
+                             document.getElementById("toplamTutar").innerHTML = toplamTutar * carpan + " USD";
+
+                        }
+
                         function kitapAzalt(){
 
                             sepetMiktar--;
                             toplamAdet--;
+                            carpan--;
 
                             document.getElementById("sepetMiktar").innerText = sepetMiktar;
                             document.getElementById("toplamAdet").innerHTML = toplamAdet;
-
-                            /* toplamTutar-=kitap1.fiyat; */
-
-                            let kitapID=0;
-
-                            kitapID = Number(prompt("Kitap ID giriniz"));
-
-                            if(kitapID == 1){
-                             toplamTutar-=kitap1.fiyat;
-                            }
-
-                            if(kitapID==2){
-                                toplamTutar-= kitap2.fiyat;
-                            }
-
-                            if(kitapID==3){
-                                toplamTutar-= kitap3.fiyat;
-                            }
-                            
-                            if(kitapID==4){
-                                toplamTutar-= kitap4.fiyat;
-                            }
-
-                            if(kitapID==5){
-                                toplamTutar-= kitap5.fiyat;
-                            }
-
-                            if(kitapID==6){
-                                toplamTutar-= kitap6.fiyat;
-                            }
-
-                            if(kitapID==7){
-                                toplamTutar-= kitap7.fiyat;
-                            }
-
-                            if(kitapID==8){
-                                toplamTutar-= kitap8.fiyat;
-                            }
-
-                            if(kitapID==9){
-                                toplamTutar-= kitap9.fiyat;
-                            }
+                            document.getElementById("toplamTutar").innerHTML = toplamTutar*carpan + " USD";
 
 
-                            if(toplamAdet<1){
+                            if(toplamAdet<=0){
                                 sepetMiktar=0;
                                 toplamAdet=0;
                                 toplamTutar=0;
-                                document.getElementById("toplamAdet").innerHTML = 0;
+                                document.getElementById("toplamAdet").innerHTML = "0 Adet";
                                 document.getElementById("sepetMiktar").innerHTML = "";
-                                document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
+                                document.getElementById("toplamTutar").innerHTML = "0 USD";
 
                             }
-
-                            document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
-
 
                         }
-
-                        function kitapArttir() {
-
-                            sepetMiktar++;
-                            toplamAdet++;
-
-                            document.getElementById("sepetMiktar").innerText = sepetMiktar;
-                            document.getElementById("toplamAdet").innerHTML = toplamAdet;
-
-                            /* toplamTutar+=kitap1.fiyat; */
-
-                            let kitapID=0;
-                            
-                            kitapID = Number(prompt("Kitap ID giriniz"));
-
-                            if(kitapID == 1){
-                             toplamTutar+=kitap1.fiyat;
-                            }
-
-                            if(kitapID==2){
-                                toplamTutar+= kitap2.fiyat;
-                            }
-
-                            if(kitapID==3){
-                                toplamTutar+= kitap3.fiyat;
-                            }
-                            
-                            if(kitapID==4){
-                                toplamTutar+= kitap4.fiyat;
-                            }
-
-                            if(kitapID==5){
-                                toplamTutar+= kitap5.fiyat;
-                            }
-
-                            if(kitapID==6){
-                                toplamTutar+= kitap6.fiyat;
-                            }
-
-                            if(kitapID==7){
-                                toplamTutar+= kitap7.fiyat;
-                            }
-
-                            if(kitapID==8){
-                                toplamTutar+= kitap8.fiyat;
-                            }
-
-                            if(kitapID==9){
-                                toplamTutar+= kitap9.fiyat;
-                            }
-
-                        
-
-                            document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
-                            
-
-                        }
-                        
