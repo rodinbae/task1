@@ -1,0 +1,26 @@
+$primary: #8d1350;
+
+$carousel-control-icon-width:        3rem;
+$carousel-control-width: 80px;
+
+$carousel-control-opacity:           .2;
+$carousel-indicator-width:           30px;
+
+$carousel-indicator-height:          5px;
+$carousel-caption-width:             70%;
+
+$carousel-caption-padding-y:         0.5rem;
+$carousel-caption-spacer:            1.2rem;
+
+$carousel-dark-indicator-active-bg:  #8d1350;
+$carousel-dark-caption-color:        #8d1350;
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+#myNavbar a:hover{
+text-decoration: underline;
+font-weight: bolder;
+}
+

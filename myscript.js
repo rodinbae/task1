@@ -28,16 +28,16 @@ let toplamAdet = 0;
 // offcanvas'ta bulunan toplam tutari arttiracak kod.
 let toplamTutar = 0;
 
-// kitapArttir fonksiyonunda kullanilan kod.
+// kitapArttir ve kitapAzalt fonksiyonunda kullanilan kod.
 let carpan = 1;
 
 function Kontrol(){
 
-    alert("Sepete urun eklenmistir");
+    
     sepetMiktar++; //yukarida bahsettigim gibi navbardaki sepet ikonunun yanina gelen sayiyi arttiriyor.
     toplamAdet++; //offcanvas'ta bulunan toplam adet sayisini arttiriyor
     
-    toplamTutar += 20;
+    toplamTutar += kitap1.fiyat;
 
     document.getElementById("sepetMiktar").innerText = sepetMiktar;
 
@@ -49,13 +49,12 @@ function Kontrol(){
 }
 
 function Kontrol2(){
-    alert("Sepete urun eklenmistir");
     sepetMiktar++;
     toplamAdet++;
 
 
 
-    toplamTutar+=15;
+    toplamTutar+=kitap2.fiyat;
 
     document.getElementById("sepetMiktar").innerText = sepetMiktar;
 
@@ -65,14 +64,29 @@ function Kontrol2(){
 
     document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
 
+    
+    /* if(Kontrol){
+        document.getElementById("sepetMiktar").innerText = sepetMiktar;
+       
+        document.getElementById("kitapIcerik").innerHTML = kitap1.resim + "<br>" + "Kitap Adi: " + kitap1.isim + "<br>" + "Yazar: " + kitap1.yazar + "<br>" + "Fiyat: " + kitap1.fiyat + " USD" + "<br>" + "ID: " + kitap1.id;
+        document.getElementById("kitapIcerik2").innerHTML = kitap2.resim + "<br>" + "Kitap Adi: " + kitap2.isim + "<br>" + "Yazar: " + kitap2.yazar + "<br>" + "Fiyat: " + kitap2.fiyat + " USD" + "<br>" + "ID: " + kitap2.id;
+
+    document.getElementById("toplamAdet").innerHTML = toplamAdet;
+
+    document.getElementById("toplamTutar").innerHTML = toplamTutar + " USD";
+    }
+
+    else{
+        
+    } */
+
 }
 
 function Kontrol3(){
-    alert("Sepete urun eklenmistir");
     sepetMiktar++;
     toplamAdet++;
 
-    toplamTutar+=30;
+    toplamTutar+=kitap3.fiyat;
 
     document.getElementById("sepetMiktar").innerText = sepetMiktar;
 
@@ -85,12 +99,11 @@ function Kontrol3(){
     }
 
     function Kontrol4(){
-        alert("Sepete urun eklenmistir");
 
         sepetMiktar++;
         toplamAdet++;
 
-        toplamTutar+=10;
+        toplamTutar+=kitap4.fiyat;
 
         document.getElementById("sepetMiktar").innerText = sepetMiktar;
 
@@ -103,12 +116,11 @@ function Kontrol3(){
         }
 
         function Kontrol5(){
-            alert("Sepete urun eklenmistir");
 
             sepetMiktar++;
             toplamAdet++;
 
-            toplamTutar+=15;
+            toplamTutar+=kitap5.fiyat;
 
             document.getElementById("sepetMiktar").innerText = sepetMiktar;
             
@@ -121,12 +133,11 @@ function Kontrol3(){
             }
 
             function Kontrol6(){
-                alert("Sepete urun eklenmistir");
                 sepetMiktar++;
 
                 toplamAdet++;
 
-                toplamTutar+=15;
+                toplamTutar+=kitap6.fiyat;
 
                 document.getElementById("sepetMiktar").innerText = sepetMiktar;
 
@@ -139,10 +150,9 @@ function Kontrol3(){
                 }
 
                 function Kontrol7(){
-                    alert("Sepete urun eklenmistir");
                     sepetMiktar++;
                     toplamAdet++;
-                    toplamTutar+=30;
+                    toplamTutar+=kitap7.fiyat;
 
                     document.getElementById("sepetMiktar").innerText = sepetMiktar;
 
@@ -155,10 +165,9 @@ function Kontrol3(){
                     }
 
                     function Kontrol8(){
-                        alert("Sepete urun eklenmistir");
                         sepetMiktar++;
                         toplamAdet++;
-                        toplamTutar+=12;
+                        toplamTutar+=kitap8.fiyat;
 
                         document.getElementById("sepetMiktar").innerText = sepetMiktar;
                             
@@ -171,10 +180,9 @@ function Kontrol3(){
                         }
 
                         function Kontrol9(){
-                            alert("Sepete urun eklenmistir");
                             sepetMiktar++;
                             toplamAdet++;
-                            toplamTutar+=30;
+                            toplamTutar+=kitap9.fiyat;
 
                             document.getElementById("sepetMiktar").innerText = sepetMiktar;
                                 
@@ -188,15 +196,19 @@ function Kontrol3(){
 
 
                         function sepetiTemizle(){
-                            document.getElementById("kitapIcerik").innerHTML = "";
-                            document.getElementById("sepetMiktar").innerHTML = "";
-                            document.getElementById("toplamTutar").innerHTML = "0 USD";
-                            document.getElementById("toplamAdet").innerHTML = "0 Adet";
+                            
+                            sepetMiktar=0;
+                            toplamAdet=0;
+                            carpan=1;
+                            toplamTutar=0;
 
-                            toplamTutar = 0; //toplam tutar yazan sayi
-                            toplamAdet = 0; //toplam adet yazan sayi
-                            sepetMiktar = 0; //hem navbardaki hem offcanvastaki sayiyi sifirliyor
+                            document.getElementById("sepetMiktar").innerText = "";
+                            document.getElementById("toplamAdet").innerHTML = "";
+                            document.getElementById("toplamTutar").innerHTML = toplamTutar*carpan + " USD";
+                            document.getElementById("kitapIcerik").innerHTML = "Sepetinizde urun bulunmamaktadir"
+                            document.getElementById("kitapIcerik2").innerHTML ="";
 
+                               
                             alert("Sepetiniz temizlenmistir");
                         }
 
@@ -204,9 +216,9 @@ function Kontrol3(){
                             
                             toplamAdet++;
                             sepetMiktar++;
-
                             carpan++;
-
+                            
+                        
                              document.getElementById("sepetMiktar").innerText = sepetMiktar;
                              document.getElementById("toplamAdet").innerHTML = toplamAdet; 
                              document.getElementById("toplamTutar").innerHTML = toplamTutar * carpan + " USD";
@@ -219,19 +231,116 @@ function Kontrol3(){
                             toplamAdet--;
                             carpan--;
 
+                        
+                            
                             document.getElementById("sepetMiktar").innerText = sepetMiktar;
                             document.getElementById("toplamAdet").innerHTML = toplamAdet;
                             document.getElementById("toplamTutar").innerHTML = toplamTutar*carpan + " USD";
 
 
-                            if(toplamAdet<=0){
-                                sepetMiktar=0;
-                                toplamAdet=0;
-                                toplamTutar=0;
-                                document.getElementById("toplamAdet").innerHTML = "0 Adet";
-                                document.getElementById("sepetMiktar").innerHTML = "";
-                                document.getElementById("toplamTutar").innerHTML = "0 USD";
+                             if(toplamAdet < 1){
 
-                            }
+                            sepetMiktar=0;
+                            toplamAdet=0;
+                            carpan=1;
+                            toplamTutar=0;
+
+                            document.getElementById("sepetMiktar").innerText = "";
+                            document.getElementById("toplamAdet").innerHTML = "";
+                            document.getElementById("toplamTutar").innerHTML = toplamTutar*carpan + " USD";
+                            document.getElementById("kitapIcerik").innerHTML = "Sepetinizde urun bulunmamaktadir"
+                            } 
 
                         }
+
+
+                        function kitapKaldir(){
+                            
+                            sepetMiktar=0;
+                            toplamAdet=0;
+                            toplamTutar=0;
+                            carpan=1;
+                            
+                            document.getElementById("kitapIcerik").innerHTML = "";
+                            document.getElementById("toplamAdet").innerHTML = "";
+                            document.getElementById("toplamTutar").innerHTML = "";
+                            document.getElementById("sepetMiktar").innerHTML = "";
+                        }
+                        
+
+
+                        // BASARIYLA EKLENMSTIR YAZISI CIKMASI ICIN GEREKLI JS KODU
+
+                        const toastTrigger = document.getElementById('myToast')
+                        const toastTrigger2 = document.getElementById('myToast2')
+                        const toastTrigger3 = document.getElementById('myToast3')
+                        const toastTrigger4 = document.getElementById('myToast4')
+                        const toastTrigger5 = document.getElementById('myToast5')
+                        const toastTrigger6 = document.getElementById('myToast6')
+                        const toastTrigger7= document.getElementById('myToast7')
+                        const toastTrigger8= document.getElementById('myToast8')
+                        const toastTrigger9= document.getElementById('myToast9')
+
+                        const toastLiveExample = document.getElementById('liveToast')
+
+                        if (toastTrigger) {
+                            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+                            toastTrigger.addEventListener('click', () => {
+                             toastBootstrap.show()
+                             })
+                                            }
+
+                      if (toastTrigger2) {
+                           const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+                          toastTrigger2.addEventListener('click', () => {
+                           toastBootstrap.show()
+                          })
+                                                                }
+
+                         if (toastTrigger3) {
+                             const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+                             toastTrigger3.addEventListener('click', () => {
+                               toastBootstrap.show()
+                              })
+                                                                                    }
+
+                             if (toastTrigger4) {
+                                 const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+                                 toastTrigger4.addEventListener('click', () => {
+                                  toastBootstrap.show()
+                                  })
+                                                 }
+                            
+                             if (toastTrigger5) {
+                                const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+                                toastTrigger5.addEventListener('click', () => {
+                                 toastBootstrap.show()
+                                 })
+                                                                    }
+                                 if (toastTrigger6) {
+                                     const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+                                     toastTrigger6.addEventListener('click', () => {
+                                      toastBootstrap.show()
+                                      })
+                                                                                        }
+
+                             if (toastTrigger7) {
+                                 const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+                                 toastTrigger7.addEventListener('click', () => {
+                                  toastBootstrap.show()
+                                  })
+                                                                                                            }
+
+                             if (toastTrigger8) {
+                                 const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+                                 toastTrigger8.addEventListener('click', () => {
+                                  toastBootstrap.show()
+                                  })
+                                                                                                                                }
+
+                            if (toastTrigger9) {
+                                const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+                                toastTrigger9.addEventListener('click', () => {
+                                 toastBootstrap.show()
+                                 })
+                              }
